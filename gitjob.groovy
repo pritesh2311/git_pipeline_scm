@@ -18,5 +18,8 @@ pipeline{
                 sh "ls -lart"
             }
         }
+        stage('deploy'){
+            
+        }
     }
 }
