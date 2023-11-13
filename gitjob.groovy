@@ -22,9 +22,9 @@ pipeline{
             steps{
                 sh "chmod 777 ./target/*.war"
                 sh "chmod +w -v /opt/tomcat"
-                sh "sudo cp ./target/*.war /opt/tomcat/webapps/"
-                sh "sudo cd /opt/tomcat/bin"
-                sh "sudo ./startup.sh"
+                sh "cp ./target/*.war /opt/tomcat/webapps/"
+                sh "cd /opt/tomcat/bin"
+                sh "./startup.sh"
             }
         }
     }
