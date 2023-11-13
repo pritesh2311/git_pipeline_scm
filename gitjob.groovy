@@ -21,7 +21,6 @@ pipeline{
         stage('deploy'){
             steps{
                 sh "chmod 777 ./target/*.war"
-                sh "chmod +rwx /opt/tomcat"
                 sh "cp ./target/*.war /opt/tomcat/webapps/"
                 sh "cd /opt/tomcat/bin"
                 sh "./startup.sh"
