@@ -22,8 +22,9 @@ pipeline{
             steps{
                 sh "chmod 777 ./target/*.war"
                 sh "cp ./target/*.war /opt/tomcat/webapps/"
-                sh "cd /opt/tomcat/bin"
-                sh "./startup.sh"
+                dir("/opt/tomcat/bin"){
+                    sh "./startup.sh"
+                }
             }
         }
     }
