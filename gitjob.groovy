@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('code-pull'){
             steps{
-                git 'https://github.com/pritesh2311/student-ui.git'
+                git 'https://github.com/pritesh2311/onlinebookstore.git'
             }
         }
         stage('listing'){
